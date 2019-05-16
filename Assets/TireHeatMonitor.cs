@@ -3,6 +3,9 @@
 public class TireHeatMonitor : MonoBehaviour
 {
     private FrictionMonitor frictionMonitor;
+    public float maxHeat;
+    private static readonly int EmissionColor = Shader.PropertyToID("_EmissionColor");
+
     private FrictionMonitor FrictionMonitor
     {
         get
@@ -20,6 +23,7 @@ public class TireHeatMonitor : MonoBehaviour
 
     void Update()
     {
-        Debug.Log($"{name} Heat: {FrictionMonitor.heat}");
+        FrictionMonitor.GetComponent<Renderer>().material.SetColor(EmissionColor,
+            Color.Lerp(Color.black, Color.white, FrictionMonitor.heat / maxHeat));
     }
 }
