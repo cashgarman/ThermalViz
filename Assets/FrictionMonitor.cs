@@ -1,5 +1,4 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FrictionMonitor : MonoBehaviour
 {
@@ -8,6 +7,7 @@ public class FrictionMonitor : MonoBehaviour
     public float coolingRate;
 
     public float heat;
+    public float maxHeat;
 
     void Update()
     {
@@ -16,6 +16,6 @@ public class FrictionMonitor : MonoBehaviour
 
         heat += rotationDelta * heatRatePerDegreeSpin / 360f;
         heat -= coolingRate * Time.deltaTime;
-        heat = Mathf.Max(heat, 0f);
+        heat = Mathf.Clamp(heat, 0f, maxHeat);
     }
 }

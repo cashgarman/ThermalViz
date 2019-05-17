@@ -95,3 +95,4 @@ MonoBehaviour:
   heatRatePerDegreeSpin: 0.2
   coolingRate: 2
   heat: 0
+  maxHeat: 50
