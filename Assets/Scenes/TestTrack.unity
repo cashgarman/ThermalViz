@@ -19632,6 +19632,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HumanCar
       objectReference: {fileID: 0}
+    - target: {fileID: 54000011937158112, guid: 6577377bae7db18429e690f8f8f57881,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012934762246, guid: 6577377bae7db18429e690f8f8f57881, type: 3}
       propertyPath: m_LocalPosition.x
       value: 144.09
@@ -19679,7 +19684,7 @@ PrefabInstance:
     - target: {fileID: 114000013910545014, guid: 6577377bae7db18429e690f8f8f57881,
         type: 3}
       propertyPath: driveType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000013910545014, guid: 6577377bae7db18429e690f8f8f57881,
         type: 3}
