@@ -12,6 +12,7 @@ public class ChassisHeatMonitor : MonoBehaviour
     public float heat;
     public float maxHeat;
     public float coolingPerSecond;
+    public Color minHeatColor;
     public Color maxHeatColor;
 
     private void Start()
@@ -29,7 +30,7 @@ public class ChassisHeatMonitor : MonoBehaviour
 
         foreach (var material in renderer.materials)
         {
-            material.SetColor(EmissionColor, Color.Lerp(Color.black, maxHeatColor, heat / maxHeat));
+            material.SetColor(EmissionColor, Color.Lerp(minHeatColor, maxHeatColor, heat / maxHeat));
         }
 
         heat -= coolingPerSecond * Time.deltaTime;
