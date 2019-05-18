@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using System.Collections;
 
 [Serializable]
 public enum DriveType
@@ -44,6 +45,8 @@ public class WheelDrive : MonoBehaviour
     public float exhaustCoolingPerSecond;
     public float velocity;
     private bool acceleratorPressedOnce;
+    public BrakeHeatMonitor[] brakeDisks;
+    public float brakeHeatingPerSecond;
 
     // Find all the WheelColliders down in the hierarchy.
 	void Start()
@@ -105,7 +108,16 @@ public class WheelDrive : MonoBehaviour
 			{
 				wheel.motorTorque = torque;
 			}
-
+			
+			// If brakes are being applied
+			if (torque < 0)
+			{
+				foreach (var brakeDisk in brakeDisks)
+				{
+					brakeDisk.heat += brakeHeatingPerSecond * Time.deltaTime;
+				}
+			}
+			
 			// Update visual wheels if any.
 			if (wheelShape) 
 			{

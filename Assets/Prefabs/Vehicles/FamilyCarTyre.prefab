@@ -93,6 +93,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heatRatePerDegreeSpin: 0.2
-  coolingRate: 2
+  coolingRate: 2.5
   heat: 0
   maxHeat: 50
