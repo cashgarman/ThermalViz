@@ -27,10 +27,10 @@ public class ChassisHeatMonitor : MonoBehaviour
         prevPosition = transform.parent.position;
 
         heat = Mathf.Min(maxHeat, heat + velocity * heatPerSecondPerVelocity);
-        Debug.Log($"chassis heat: {heat}");
+//        Debug.Log($"chassis heat: {heat}");
         
         var bodyColor = Color.Lerp(minHeatColor, maxHeatColor, heat / maxHeat);
-        Debug.Log($"Body Color: {bodyColor}");
+//        Debug.Log($"Body Color: {bodyColor}");
         foreach (var material in renderer.materials)
         {
             material.SetColor(EmissionColor, bodyColor);

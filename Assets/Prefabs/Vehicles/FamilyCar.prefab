@@ -5425,6 +5425,7 @@ GameObject:
   - component: {fileID: 114000011571154704}
   - component: {fileID: 114000013910545014}
   - component: {fileID: 119772926}
+  - component: {fileID: 119772922}
   m_Layer: 0
   m_Name: FamilyCar
   m_TagString: Untagged
@@ -5504,7 +5505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxAngle: 30
   maxTorque: 900
-  brakeTorque: 30000
+  brakeTorque: 50000
   wheelShape: {fileID: 115638, guid: 2d269fe0b3459fd4b82b35627ebdb76b, type: 3}
   criticalSpeed: 5
   stepsBelow: 5
@@ -5545,6 +5546,19 @@ MonoBehaviour:
   RLTireHeatMonitor: {fileID: 1893748738171071529}
   RRTireHeatMonitor: {fileID: 4909493003439713962}
   exaustHeatMonitor: {fileID: 114000013910545014}
+--- !u!114 &119772922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013904118194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c521001b8259945a54bb4f81c49625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statsText: {fileID: 0}
 --- !u!1 &1000014136951468
 GameObject:
   m_ObjectHideFlags: 0

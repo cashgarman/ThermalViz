@@ -85,6 +85,10 @@ public class WheelDrive : MonoBehaviour
 				acceleratorPressedOnce = true;
 			}
 		}
+		else
+		{
+			acceleratorPressedOnce = true;
+		}
 
 		float handBrake = Input.GetKey(KeyCode.X) ? brakeTorque : 0;
 
