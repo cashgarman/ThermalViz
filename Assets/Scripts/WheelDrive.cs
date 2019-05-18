@@ -146,8 +146,8 @@ public class WheelDrive : MonoBehaviour
 			exhaustHeat = Mathf.Max(exhaustHeat, 0f);
 		}
 		
-//		var emissionModule = exhaustParticleSystem.emission;
-//		emissionModule.rateOverTime = Mathf.Lerp(minExhaustEmissionRate, maxExhaustEmissionRate, torque);
+		var emissionModule = exhaustParticleSystem.emission;
+		emissionModule.rateOverTime = Mathf.Lerp(minExhaustEmissionRate, maxExhaustEmissionRate, torque);
 	}
 
 	private void UpdateExhaust()

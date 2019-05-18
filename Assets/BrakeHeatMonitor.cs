@@ -11,7 +11,6 @@ public class BrakeHeatMonitor : MonoBehaviour
     void Update()
     {
         heat = Mathf.Clamp(heat - coolingPerSecond * Time.deltaTime, 0f, maxHeat);
-        Debug.Log($"{name} brake heat: {heat}");
         GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.Lerp(minHeatColor, maxHeatColor, heat));
     }
 }
