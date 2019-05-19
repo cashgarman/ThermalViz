@@ -9,7 +9,7 @@ public class VehicleStats : MonoBehaviour
     {
         if (statsText != null)
         {
-            statsText.text = $"{GetComponent<Rigidbody>().velocity.magnitude:F1} mph";
+            statsText.text = $"{GetComponent<Rigidbody>().velocity.magnitude*1.5f:F1} mph";
         }
     }
 }

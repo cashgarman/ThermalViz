@@ -3099,12 +3099,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 163484379}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &164047260 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000012327743680, guid: 6577377bae7db18429e690f8f8f57881,
-    type: 3}
-  m_PrefabInstance: {fileID: 1823999311}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &168860416
 GameObject:
   m_ObjectHideFlags: 0
@@ -8468,9 +8462,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothing: 6
-  lookAtTarget: {fileID: 1857996804}
-  positionTarget: {fileID: 2041072565}
-  sideView: {fileID: 164047260}
+  lookAtTarget: {fileID: 0}
+  positionTarget: {fileID: 0}
+  sideView: {fileID: 0}
   advancedOptions:
     updateCameraInUpdate: 0
     updateCameraInFixedUpdate: 1
@@ -55228,11 +55222,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012934762246, guid: 6577377bae7db18429e690f8f8f57881, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.64
+      value: 0.79
       objectReference: {fileID: 0}
     - target: {fileID: 4000012934762246, guid: 6577377bae7db18429e690f8f8f57881, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 450.94
+      value: 450.68
       objectReference: {fileID: 0}
     - target: {fileID: 4000012934762246, guid: 6577377bae7db18429e690f8f8f57881, type: 3}
       propertyPath: m_LocalRotation.x
@@ -55266,15 +55260,95 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013910545014, guid: 6577377bae7db18429e690f8f8f57881,
+    - target: {fileID: 146000012133133230, guid: 6577377bae7db18429e690f8f8f57881,
         type: 3}
-      propertyPath: maxTorque
-      value: 900
+      propertyPath: m_SuspensionDistance
+      value: 0.19620001
+      objectReference: {fileID: 0}
+    - target: {fileID: 146000012133133230, guid: 6577377bae7db18429e690f8f8f57881,
+        type: 3}
+      propertyPath: m_SuspensionSpring.spring
+      value: 40715.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 146000012133133230, guid: 6577377bae7db18429e690f8f8f57881,
+        type: 3}
+      propertyPath: m_SuspensionSpring.damper
+      value: 6514.477
+      objectReference: {fileID: 0}
+    - target: {fileID: 146000012133133230, guid: 6577377bae7db18429e690f8f8f57881,
+        type: 3}
+      propertyPath: m_ForceAppPointDistance
+      value: 0.8625903
+      objectReference: {fileID: 0}
+    - target: {fileID: 146000013638572144, guid: 6577377bae7db18429e690f8f8f57881,
+        type: 3}
+      propertyPath: m_SuspensionSpring.spring
+      value: 34782.605
+      objectReference: {fileID: 0}
+    - target: {fileID: 146000013638572144, guid: 6577377bae7db18429e690f8f8f57881,
+        type: 3}
+      propertyPath: m_SuspensionSpring.damper
+      value: 5565.2163
+      objectReference: {fileID: 0}
+    - target: {fileID: 146000013638572144, guid: 6577377bae7db18429e690f8f8f57881,
+        type: 3}
+      propertyPath: m_SuspensionDistance
+      value: 0.19619998
+      objectReference: {fileID: 0}
+    - target: {fileID: 146000013638572144, guid: 6577377bae7db18429e690f8f8f57881,
+        type: 3}
+      propertyPath: m_ForceAppPointDistance
+      value: 0.8625903
+      objectReference: {fileID: 0}
+    - target: {fileID: 146000011612348708, guid: 6577377bae7db18429e690f8f8f57881,
+        type: 3}
+      propertyPath: m_SuspensionDistance
+      value: 0.19619998
+      objectReference: {fileID: 0}
+    - target: {fileID: 146000011612348708, guid: 6577377bae7db18429e690f8f8f57881,
+        type: 3}
+      propertyPath: m_SuspensionSpring.spring
+      value: 34284.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 146000011612348708, guid: 6577377bae7db18429e690f8f8f57881,
+        type: 3}
+      propertyPath: m_SuspensionSpring.damper
+      value: 5485.523
+      objectReference: {fileID: 0}
+    - target: {fileID: 146000011612348708, guid: 6577377bae7db18429e690f8f8f57881,
+        type: 3}
+      propertyPath: m_ForceAppPointDistance
+      value: 0.8625903
+      objectReference: {fileID: 0}
+    - target: {fileID: 146000011699788318, guid: 6577377bae7db18429e690f8f8f57881,
+        type: 3}
+      propertyPath: m_SuspensionSpring.spring
+      value: 40217.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 146000011699788318, guid: 6577377bae7db18429e690f8f8f57881,
+        type: 3}
+      propertyPath: m_SuspensionSpring.damper
+      value: 6434.7837
+      objectReference: {fileID: 0}
+    - target: {fileID: 146000011699788318, guid: 6577377bae7db18429e690f8f8f57881,
+        type: 3}
+      propertyPath: m_ForceAppPointDistance
+      value: 0.8625903
       objectReference: {fileID: 0}
     - target: {fileID: 114000013910545014, guid: 6577377bae7db18429e690f8f8f57881,
         type: 3}
-      propertyPath: brakeTorque
-      value: 100000
+      propertyPath: maxExhaustColor.r
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013910545014, guid: 6577377bae7db18429e690f8f8f57881,
+        type: 3}
+      propertyPath: maxExhaustColor.g
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013910545014, guid: 6577377bae7db18429e690f8f8f57881,
+        type: 3}
+      propertyPath: maxExhaustColor.b
+      value: 0.5294118
       objectReference: {fileID: 0}
     - target: {fileID: 119772926, guid: 6577377bae7db18429e690f8f8f57881, type: 3}
       propertyPath: heatDisplayText
@@ -55442,12 +55516,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855523128}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1857996804 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000013961031458, guid: 6577377bae7db18429e690f8f8f57881,
-    type: 3}
-  m_PrefabInstance: {fileID: 1823999311}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1858936894
 GameObject:
   m_ObjectHideFlags: 0
@@ -58338,12 +58406,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033852374}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &2041072565 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000014014178478, guid: 6577377bae7db18429e690f8f8f57881,
-    type: 3}
-  m_PrefabInstance: {fileID: 1823999311}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2041830476
 GameObject:
   m_ObjectHideFlags: 0

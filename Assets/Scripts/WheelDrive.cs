@@ -33,7 +33,7 @@ public class WheelDrive : MonoBehaviour
 
     private WheelCollider[] m_Wheels;
     public float torque;
-    public ParticleSystem exhaustParticleSystem;
+    public ParticleSystem[] exhaustParticleSystems;
     public float minExhaustEmissionRate;
     public float maxExhaustEmissionRate;
     private float angle;
@@ -47,6 +47,8 @@ public class WheelDrive : MonoBehaviour
     private bool acceleratorPressedOnce;
     public BrakeHeatMonitor[] brakeDisks;
     public float brakeHeatingPerSecond;
+    public Color minExhaustColor;
+    public Color maxExhaustColor;
 
     // Find all the WheelColliders down in the hierarchy.
 	void Start()
@@ -149,17 +151,23 @@ public class WheelDrive : MonoBehaviour
 			exhaustHeat -= exhaustCoolingPerSecond * Time.deltaTime;
 			exhaustHeat = Mathf.Max(exhaustHeat, 0f);
 		}
-		
-		var emissionModule = exhaustParticleSystem.emission;
-		emissionModule.rateOverTime = Mathf.Lerp(minExhaustEmissionRate, maxExhaustEmissionRate, torque);
+
+//		foreach (var exhaustParticleSystem in exhaustParticleSystems)
+//		{
+//			var emissionModule = exhaustParticleSystem.emission;
+//			emissionModule.rateOverTime = Mathf.Lerp(minExhaustEmissionRate, maxExhaustEmissionRate, torque);
+//		}
 	}
 
 	private void UpdateExhaust()
 	{
-		var mainModule = exhaustParticleSystem.main;
-		mainModule.startColor = new ParticleSystem.MinMaxGradient
+		foreach (var exhaustParticleSystem in exhaustParticleSystems)
 		{
-			color = Color.Lerp(new Color(1, 1, 1, .01f), new Color(1, 1, 1, 1f), exhaustHeat / maxExhaustHeat),
-		};
+			var mainModule = exhaustParticleSystem.main;
+			mainModule.startColor = new ParticleSystem.MinMaxGradient
+			{
+				color = Color.Lerp(minExhaustColor, maxExhaustColor, exhaustHeat / maxExhaustHeat),
+			};
+		}
 	}
 }
